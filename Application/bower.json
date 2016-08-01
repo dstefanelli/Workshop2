@@ -1,0 +1,20 @@
+{
+  "name": "mvc-application-simple",
+  "authors": ["Diego Stefanelli"],
+  "description": "Simple JS/MVC jQuery & Bootstrap code.",
+  "main": "",
+  "moduleType": [],
+  "license": "CC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0"
+  }
+}
