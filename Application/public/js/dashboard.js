@@ -35,4 +35,21 @@ dashboardInit = function () {
             }
         });
     };
+	var url = "https://api.nytimes.com/svc/topstories/v1/home.json";
+	url += '?' + $.param({
+		'api-key': "9c5565e3261242c5bd215d59c677ce93"
+	});
+	$.ajax({
+		url: url
+		, method: 'GET'
+	, }).done(function (result) {
+		console.log(result);
+		var url = result.results[0].multimedia[0].url;
+		//$("news-media > img").attr("src=", html( url ) );
+		$(".date").html(result.results[0].created_date);
+		$(".title").html(result.results[0].title);
+		$(".excerpt").html(result.results[0].abstract);
+	}).fail(function (err) {
+		throw err;
+	});
 };
